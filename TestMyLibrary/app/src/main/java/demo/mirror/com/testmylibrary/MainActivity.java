@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import demo.mirror.com.mylibrary.TestUtil;
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,5 +16,6 @@ public class MainActivity extends AppCompatActivity {
         int a = TestUtil.A;
 
         int b = TestUtil.A;
+
     }
 }

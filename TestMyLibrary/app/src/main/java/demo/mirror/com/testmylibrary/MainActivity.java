@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         int a = TestUtil.A;
 
         int b = TestUtil.A;
+        int c = TestUtil.B;
 
     }
 }

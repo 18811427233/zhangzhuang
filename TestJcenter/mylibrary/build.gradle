@@ -1,4 +1,11 @@
 apply plugin: 'com.android.library'
+repositories {
+    jcenter()
+    flatDir {
+        dirs 'libs'
+    }
+
+}
 
 android {
     compileSdkVersion 25
@@ -26,6 +33,17 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
+    //
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'com.alibaba:fastjson:1.1.54.android'
+    compile 'org.slf4j:slf4j-android:1.7.7'
+
+    //
+    compile ':mirror-android-common-1.2.1@aar'
+    compile ':mirror-android-http-2.0.0@aar'
+    compile ':mirror-android-dialog-1.0.3@aar'
+
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
 }
@@ -47,7 +65,7 @@ def libName = "mylibrary"
 group = "demo.mirror.com.testjcenter"
 
 // 版本号，//compile引用时的最后部分项目名，下次更新是只需要更改版本号即可
-version = "1.0.0"
+version = "1.0.1"
 
 //上面配置后上传至JCenter后的编译路径是这样的：compile 'com.ddz.materialdesign:FloatingActionButton:1.0.1'
 

@@ -90,7 +90,7 @@ public class BaseModel extends CommonModel {
      * @param req
      * @param httpHandler
      */
-    public static void sendGet(String url, Object req, HttpHandler httpHandler) {
+    public  void sendGet(String url, Object req, HttpHandler httpHandler) {
         if (hasNetWork()) {
             httpClient.sendGet(url, toParams(req), httpHandler);
         } else {

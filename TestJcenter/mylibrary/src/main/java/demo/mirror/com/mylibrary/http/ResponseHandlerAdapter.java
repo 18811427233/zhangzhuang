@@ -1,16 +1,10 @@
 package demo.mirror.com.mylibrary.http;
 
-import android.content.Intent;
-import android.os.Bundle;
-
-import com.bdkx.sciencepark.constant.Constant;
-import com.bdkx.sciencepark.vm.user.LoginActivity;
 import com.mirror.httpsession.adapter.DefaultResponseHandlerAdapter;
 import com.mirror.httpsession.adapter.HttpCallBack;
 import com.mirror.httpsession.request.HttpRequest;
 
 import cn.trinea.android.common.util.JsonUtils;
-import cn.trinea.android.common.util.ToastUtils;
 import cz.msebera.android.httpclient.Header;
 
 /**
@@ -46,13 +40,13 @@ public class ResponseHandlerAdapter extends DefaultResponseHandlerAdapter {
                     getHttpCallBack().onSuccess(response);
                 } else if (resp.getErrno() == LOGIN_TIMEOUT) {
 
-                    ToastUtils.show(getHttpRequest().getContext(), "登录超时，请重新登录");
-                    Intent intent = new Intent(getHttpRequest().getContext(), LoginActivity.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putBoolean(Constant.INTENT_EXTRA_BOOT_LOGIN, false);
-                    intent.putExtras(bundle);
-                    getHttpRequest().getContext().startActivity(intent);
-                    getHttpCallBack().onFinish();
+//                    ToastUtils.show(getHttpRequest().getContext(), "登录超时，请重新登录");
+//                    Intent intent = new Intent(getHttpRequest().getContext(), LoginActivity.class);
+//                    Bundle bundle = new Bundle();
+//                    bundle.putBoolean(Constant.INTENT_EXTRA_BOOT_LOGIN, false);
+//                    intent.putExtras(bundle);
+//                    getHttpRequest().getContext().startActivity(intent);
+//                    getHttpCallBack().onFinish();
 
                 } else {
                     getHttpCallBack().onFailure(statusCode, response, null);

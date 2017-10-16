@@ -1,7 +1,6 @@
 package demo.mirror.com.mylibrary;
 
 import android.content.Context;
-import android.util.Log;
 
 import demo.mirror.com.mylibrary.http.HttpConstant;
 import demo.mirror.com.mylibrary.http.HttpHandler;
@@ -23,7 +22,7 @@ public class TestUtil extends BaseModel{
     /**
      * 首页banner
      */
-    public static void carouselList() {
+    public void carouselList() {
 
         CarouselListReq req = new CarouselListReq();
         req.setCityName("全国");
@@ -39,8 +38,6 @@ public class TestUtil extends BaseModel{
             @Override
             public void onSuccess(String response) {
                 super.onSuccess(response);
-
-                Log.e("====library=======","========="+response.toString());
 
             }
 

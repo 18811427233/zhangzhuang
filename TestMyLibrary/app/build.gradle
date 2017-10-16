@@ -1,5 +1,16 @@
 apply plugin: 'com.android.application'
 
+repositories {
+
+    jcenter()
+    flatDir {
+        dirs 'libs'
+    }
+    maven {
+        url "https://dl.bintray.com/18811427232/maven"
+    }
+}
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
@@ -16,12 +27,6 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-
-    repositories {
-        maven {
-            url "https://dl.bintray.com/18811427232/maven"
         }
     }
 }

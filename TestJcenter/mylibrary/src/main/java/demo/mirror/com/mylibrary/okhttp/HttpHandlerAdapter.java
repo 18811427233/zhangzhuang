@@ -1,4 +1,4 @@
-package demo.mirror.com.mylibrary.adapter;
+package demo.mirror.com.mylibrary.okhttp;
 
 /**
  * Default Implements for HttpCallBack
@@ -20,16 +20,6 @@ public class HttpHandlerAdapter implements HttpCallBack {
     @Override
     public void onFailure(int statusCode, String response, Throwable error) {
         // Response failed :(
-    }
-
-    @Override
-    public void onProgress(long bytesWritten, long totalSize) {
-        // Progress notification
-    }
-
-    @Override
-    public void onRetry(int retryNo) {
-        // Request was retried
     }
 
     @Override

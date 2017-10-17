@@ -1,4 +1,4 @@
-package demo.mirror.com.mylibrary;
+package demo.mirror.com.mylibrary.okhttp.entity;
 
 /**
  * 首页轮播请求

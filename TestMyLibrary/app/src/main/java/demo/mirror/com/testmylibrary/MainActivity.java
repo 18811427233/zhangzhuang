@@ -18,5 +18,9 @@ public class MainActivity extends AppCompatActivity {
         int b = TestUtil.A;
         int c = TestUtil.B;
 
+        TestUtil testUtil = new TestUtil(this);
+        testUtil.http();
+
+
     }
 }

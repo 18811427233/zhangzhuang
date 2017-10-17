@@ -1,4 +1,4 @@
-package demo.mirror.com.mylibrary.http;
+package demo.mirror.com.mylibrary.okhttp;
 
 /**
  * 网络请求常量
